@@ -1,0 +1,37 @@
+<%= render'/shared/dash_board' %>
+<html>  
+  <body>  
+    <div class="container">   
+      <div>   
+        <%= link_to 'Add car', new_car_path %>   
+      </div>   
+      <br>   
+      <table class="table">
+        <thead class="thead bg-danger">
+          <tr>   
+            <th scope="col">Name</th>
+            <th scope="col">Number</th>
+            <th scope="col">Model</th>
+            <th scope="col">Company</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+          </tr>   
+        </thead>   
+        <tbody>   
+          <% @cars.each do |car| %>   
+            <tr>   
+              <td ><%= car.name %></td>   
+              <td><%= car.number %></td>
+              <td><%= car.model %></td>
+              <td><%= car.company %></td>
+              <td><%= button_to 'Edit', edit_car_path(car), method: 'get',:class => "btn btn-success"%></td>
+              <td><%= button_to 'Remove', car_path(car), method: 'delete', data: { confirm: 'Are you sure?' },:class => "btn btn-danger" %>
+              </td>
+            </tr>   
+          <% end %>   
+        </tbody>   
+      </table>   
+    </div>   
+  </body>   
+</html>  
+

@@ -1,0 +1,36 @@
+<%= render 'shared/mechanic_nav'%>
+<h1>Welcome to <%= current_user.name %> </h1>
+<table class="table table-bordered">
+  <tr class="bg-info">
+    <th>Owner Name</th>
+    <th>Email</th>
+    <th>Contact</th>
+    <th>City</th>
+    <th>Location</th>
+    <th>House_number</th>
+    <th>Car</th>
+    <th>Model</th>
+    <th>Car_number</th>
+    <th>Issue</th>
+    <th>Status</th>
+    <th>Create Service</th>
+    <th>Customer Feedback</th>
+  </tr>
+  <% @user_bookings.each do |user_booking|%>
+    <tr> 
+      <td><%= user_booking.user.name %></td>
+      <td><%= user_booking.user.email %></td>
+      <td><%= user_booking.user.contact %></td>
+      <td><%= user_booking.user.address.city %></td>
+      <td><%= user_booking.user.address.location%></td>
+      <td><%= user_booking.user.address.house_no %></td>
+      <td><%= user_booking.car.name %></td>
+      <td><%= user_booking.car.number %></td>
+      <td><%= user_booking.car.model %></td>
+      <td><%= user_booking.issue %></td>
+      <td><%= user_booking.status%></td>
+      <td> <%= link_to " Service", new_service_path(booking_id: user_booking.id) %></td>
+      <td><%= link_to "view", view_path %></td>
+    </tr>
+  <% end %>
+</table>

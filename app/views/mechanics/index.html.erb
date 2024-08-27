@@ -1,0 +1,19 @@
+<%= render  'shared/admin_navbar' %>
+<table class="table table-bordered">
+  <thead class="text-center">
+    <tr class="bg-primary">
+      <th> Name</th>
+      <th>Assine Work</th>
+      <th>mechanic_view</th>
+    </tr>
+  </thead>
+  <% @mechanics.each do |mechanic|%>
+    <tbody class="text-center">
+      <tr>
+        <td><%= mechanic.name %></td>
+        <td> <%= link_to "assinework", assinework_path(mechanic_id: mechanic.id, booking_id: @booking_mech_id) %></td>
+        <td> <%= link_to "mechanic_view", mechanic_path(mechanic, booking_id: @booking_mech_id) %></td>
+      </tr>
+    </tbody>
+  <% end %>
+</table>

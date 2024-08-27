@@ -1,0 +1,99 @@
+.nav{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(228, 199, 199);
+    line-height: 100px;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    list-style: none;
+    
+}
+.service_history{
+    margin-left: 700px;
+}
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
+ 
+.alert {
+  font-weight: bold;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+  margin-bottom: 18px;
+  padding: 12px 25px 12px 24px;
+  -moz-box-shadow: 3px 3px 1px 1px #CCCCCC;
+  -webkit-box-shadow: 3px 3px 1px 1px #CCCCCC;
+  box-shadow: 3px 3px 1px 1px #CCCCCC;
+}
+
+
+.alert-danger {
+  background-color: #ffebe9;
+  border-color: #fc7e72;
+  color: black;
+  padding-top: 20px;
+}
+
+.alert-success {
+  background-color: #dafbe1;
+  border-color: #44ab5a;
+  color: black;
+  padding-top: 20px;
+}
+
+.alert-info {
+  background-color: #ddf4ff;
+  border-color: #54aeff66;
+  color: black;
+  padding-top: 20px;
+}
+
+.alert-warning {
+  background-color: #fff8c5;
+  border-color: #cda22966;
+  color: black;
+  padding-top: 20px;
+}
+.btn-btn-p{
+  background-color: blue;
+  top: 3px;
+  left: -3px;
+  box-shadow: -3px 3px 0 $brown;
+}
+.btn-btn-danger{
+  background-color: red;
+}
+.btn-btn-danger:hover{
+  background-color: whitesmoke;
+}
+.btn-logout{
+  background-color: blue;
+
+}
+.btn-logout:hover{
+  background-color: whitesmoke;
+}
+.btn-profile{
+  background-color: red;
+}
+.btn-profile:hover{
+  background-color: whitesmoke;
+}
+.vh-bg-image{
+  background: navajowhite;
+  width: 100%;
+}
+.container{
+  opacity: 0.8;
+}
